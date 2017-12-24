@@ -31,7 +31,7 @@ Vue.use(XEAjax)
 
 ### 接受三个参数：
 * url（字符串），请求地址。可被options属性覆盖。
-* params/body（可选，字符串或对象），要发送的数据。可被options属性覆盖。
+* params/body（可选，对象/数组），要发送的数据。可被options属性覆盖。
 * options （可选，对象）参数
 ``` shell
 // 返回response对象
@@ -49,7 +49,12 @@ this.getJSON('url').then(data => {
 }).catch(data => {
   // this 指向当前vue实例
 })
-
+// url参数和数据同时提交
+this.postJSON('url', {name: 'aaa'}, {params: {id: 1}}).then(data => {
+  // this 指向当前vue实例
+}).catch(data => {
+  // this 指向当前vue实例
+})
 ```
 ### 调用参数
 | 参数 | 类型 | 描述 | 值 |
