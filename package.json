@@ -1,0 +1,28 @@
+{
+  "name": "vxe-ajax",
+  "version": "1.0.0",
+  "description": "vxe-ajax 使用Promise提供便捷函数式调用api",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xlz26296/vxe-ajax.git"
+  },
+  "keywords": [
+    "ajax",
+    "vue-ajax",
+    "vxe-ajax",
+    "vxe"
+  ],
+  "author": {
+    "name": "Xu Liangzhan",
+    "email": "xu_liangzhan@163.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xlz26296/vxe-ajax/issues"
+  },
+  "homepage": "https://github.com/xlz26296/vxe-ajax#readme"
+}
