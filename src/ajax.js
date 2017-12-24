@@ -37,6 +37,11 @@ function put (url, body, opts) {
   return createAjax('put', isObject(url) ? {} : {url: url, body: body}, opts)
 }
 
+// Http Request Method patch
+function patch (url, body, opts) {
+  return createAjax('patch', isObject(url) ? {} : {url: url, body: body}, opts)
+}
+
 // Http Request Method delete
 function deletes (url, body, opts) {
   return createAjax('delete', isObject(url) ? {} : {url: url, body: body}, opts)
@@ -56,6 +61,8 @@ export default {
   postJSON: responseJSON('post'),
   put,
   putJSON: responseJSON('put'),
+  patch,
+  patchJSON: responseJSON('patch'),
   delete: deletes,
   deleteJSON: responseJSON('delete'),
   jsonp

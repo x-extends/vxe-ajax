@@ -23,6 +23,8 @@ Vue.use(XEAjax)
 * postJSON ( url, body, options )
 * put ( url, body, options )
 * putJSON ( url, body, options )
+* patch ( url, body, options )
+* patchJSON ( url, body, options )
 * delete ( url, body, options )
 * deleteJSON ( url, body, options )
 * jsonp ( url, params, options )
@@ -32,6 +34,7 @@ Vue.use(XEAjax)
 * params/body（可选，字符串或对象），要发送的数据。可被options属性覆盖。
 * options （可选，对象）参数
 ``` shell
+// 返回response对象
 this.get('url').then(response => {
   // this 指向当前vue实例
   response.body
@@ -40,6 +43,7 @@ this.get('url').then(response => {
   response.body
   response.status
 })
+// 直接返回数据
 this.getJSON('url').then(data => {
   // this 指向当前vue实例
 }).catch(data => {
