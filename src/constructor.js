@@ -1,7 +1,7 @@
 import { XEAjaxRequest } from './request'
 import { XEAjaxResponse } from './response'
 import { XEPromise } from './promise'
-import { isFunction, isUndefined, eachObj } from './util'
+import { isFunction, isFormData, isUndefined, eachObj } from './util'
 
 var setupInterceptors = []
 var setupDefaults = {
@@ -185,4 +185,19 @@ function jsonpHandle (request, response, resolved, rejected, context) {
     (global[request.jsonpCallback] = request.customCallback).call(context, response)
   }
   sendEnd(request, response, resolved, rejected, context)
+}
+
+// set request header
+XEAjax.oninterceptor = function (request, next) {
+  if (!isFormData(request.method === 'get' ? request.params : request.body)) {
+    if (request.bodyMode === 'json') {
+      request.setHeader('Content-Type', 'application/json; charset=utf-8')
+    } else {
+      request.setHeader('Content-Type', 'application/x-www-form-urlencoded')
+    }
+  }
+  if (request.crossOrigin) {
+    request.setHeader('X-Requested-With', 'XMLHttpRequest')
+  }
+  next()
 }
