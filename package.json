@@ -1,6 +1,6 @@
 {
   "name": "vxe-ajax",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "vxe-ajax 使用Promise提供便捷函数式调用api",
   "main": "index.js",
   "scripts": {
