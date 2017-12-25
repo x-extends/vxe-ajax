@@ -1,4 +1,4 @@
-# vxe-ajax 使用Promise提供便捷函数式调用api
+# vxe-ajax 基于Vue全局安装xe-ajax
 
 ## 通过NPM安装最新版本
 
