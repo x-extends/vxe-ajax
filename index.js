@@ -1,21 +1,17 @@
-import { XEAjax } from './src/constructor'
-import ajax from './src/ajax'
-
-XEAjax.mixin(ajax)
-
 /**
- * Install Vue plugin
+ * Install VxeAjax
  */
-function plugin (Vue) {
+function plugin (Vue, func) {
+  var constructor = func.ajax
   Object.defineProperty(Vue, 'ajax', function () {
-    XEAjax.context = window
-    return XEAjax
+    constructor.context = window
+    return constructor
   })
   Object.defineProperties(Vue.prototype, {
     $ajax: {
       get () {
-        XEAjax.context = this
-        return XEAjax
+        constructor.context = this
+        return constructor
       }
     }
   })

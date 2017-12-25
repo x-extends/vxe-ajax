@@ -1,7 +1,7 @@
 {
   "name": "vxe-ajax",
-  "version": "1.0.3",
-  "description": "vxe-ajax 使用Promise提供便捷函数式调用api",
+  "version": "1.0.4",
+  "description": "vxe-ajax 基于Vue全局安装xe-ajax",
   "main": "index.js",
   "scripts": {
     "test": "make test"
@@ -13,8 +13,9 @@
   "keywords": [
     "ajax",
     "vue-ajax",
+    "xe-ajax",
     "vxe-ajax",
-    "vxe"
+    "xe"
   ],
   "author": {
     "name": "Xu Liangzhan",
