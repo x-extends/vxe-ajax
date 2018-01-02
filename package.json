@@ -1,6 +1,6 @@
 {
   "name": "vxe-ajax",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "vxe-ajax 基于Vue全局安装xe-ajax",
   "main": "index.js",
   "scripts": {
