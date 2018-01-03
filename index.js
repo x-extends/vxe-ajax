@@ -1,4 +1,4 @@
-import * as ajax from '../xe-ajax'
+import * as ajax from 'xe-ajax'
 /**
  * Install VxeAjax
  */
