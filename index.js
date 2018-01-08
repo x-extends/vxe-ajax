@@ -1,10 +1,8 @@
 function plugin (Vue, XEAjax) {
-  Object.defineProperties(Vue.prototype, {
-    $ajax: {
-      get () {
-        XEAjax.context = this
-        return XEAjax
-      }
+  Object.defineProperty(Vue.prototype, '$ajax', {
+    get: function () {
+      XEAjax.context = this
+      return XEAjax
     }
   })
 }
