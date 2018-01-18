@@ -14,14 +14,12 @@ import VXEAjax from 'vxe-ajax'
 
 Vue.use(VXEAjax, XEAjax)
 
-// 在Vue实例中使用
+// 通过vue实例的调用方式
 this.$ajax.getJSON ('url', {id: 1})
-.then(function(data) {
+.then(data => {
   // data
-  // this 指向当前vue实例
-}).catch(function(data){
+}).catch(data => {
   // data
-  // this 指向当前vue实例
 })
 ```
 
