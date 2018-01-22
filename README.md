@@ -1,4 +1,4 @@
-# vxe-ajax 用于Vue全局安装xe-ajax
+# VXEAjax 用于Vue全局安装xe-ajax
 
 ## 通过NPM安装最新版本
 
