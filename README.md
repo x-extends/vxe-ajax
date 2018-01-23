@@ -15,12 +15,10 @@ import VXEAjax from 'vxe-ajax'
 Vue.use(VXEAjax, XEAjax)
 
 // 通过vue实例的调用方式
-this.$ajax.getJSON ('url', {id: 1})
-.then(data => {
-  // data
-}).catch(data => {
-  // data
-})
+this.$ajax.doGet('services/user/list', {id: 1})
+this.$ajax.getJSON ('services/user/list', {id: 1})
+this.$ajax.doPost ('services/user/save', {id: 1})
+this.$ajax.postJSON ('services/user/save', {id: 1})
 ```
 
 ## License
