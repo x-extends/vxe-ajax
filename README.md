@@ -43,5 +43,41 @@ Vue.use(VXEAjax, XEAjax)
 this.$ajax.custom1()
 ```
 
+#### 案例
+./Home.vue
+``` shell
+<template>
+  <div>
+    <ul>
+      <li v-for="item in list" :key="item.id">item.name</li>
+    </ul>
+  </div>
+</template>
+
+<script>
+import { getJSON } from 'xe-ajax'
+
+export default {
+  data () {
+    return {
+      list: []
+    }
+  },
+  methods: {
+    init () {
+      getJSON('services/user/list').then(data => {
+        this.list = data
+      }).catch(data => {
+        this.list = []
+      })
+    }
+  },
+  created () {
+    this.init()
+  }
+}
+</script>
+```
+
 ## License
 Copyright (c) 2017-present, Xu Liangzhan
