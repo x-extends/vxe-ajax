@@ -49,7 +49,7 @@ this.$ajax.custom1()
 <template>
   <div>
     <ul>
-      <li v-for="item in list" :key="item.id">item.name</li>
+      <li v-for="item in list" :key="item.id">{{ item.name }}</li>
     </ul>
   </div>
 </template>
