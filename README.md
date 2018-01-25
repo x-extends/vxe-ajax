@@ -55,8 +55,6 @@ this.$ajax.custom1()
 </template>
 
 <script>
-import { getJSON } from 'xe-ajax'
-
 export default {
   data () {
     return {
@@ -65,7 +63,8 @@ export default {
   },
   methods: {
     init () {
-      getJSON('services/user/list').then(data => {
+      this.$ajax.getJSON('services/user/list', {id: 123})
+      .then(data => {
         this.list = data
       }).catch(data => {
         this.list = []
