@@ -1,6 +1,6 @@
 # VXEAjax 用于Vue全局安装 xe-ajax
 
-安装完成后自动挂载在vue实例 this.$ajax
+安装完成后自动挂载在vue实例 this.$ajax(XHR请求函数)
 
 ## 通过NPM安装最新版本
 
