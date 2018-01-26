@@ -1,4 +1,6 @@
-# VXEAjax 用于Vue全局安装xe-ajax
+# VXEAjax 用于Vue全局安装 xe-ajax
+
+安装完成后自动挂载在vue实例 this.$ajax
 
 ## 通过NPM安装最新版本
 
