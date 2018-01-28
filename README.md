@@ -8,7 +8,7 @@
 <script src="./dist/vxe-ajax.min.js" type="text/javascript"></script>
 
 // ./main.js 安装
-Vue.use(VXEUtils, XEUtils)
+Vue.use(VXEAjax, XEAjax)
 
 // ./app.js 通过vue实例的调用方式
 // ...vue代码省略
@@ -28,7 +28,7 @@ require.config({
 
 // ./main.js 安装
 define(['vue', 'xe-ajax', 'vxe-ajax'], function (Vue, XEAjax, VXEAjax) {
-  Vue.use(VXEUtils, XEUtils)
+  Vue.use(VXEAjax, XEAjax)
 })
 
 // ./app.js 调用
