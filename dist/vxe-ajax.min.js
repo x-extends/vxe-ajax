@@ -1,5 +1,5 @@
 /*!
- * vxe-ajax.js v1.3.0
+ * vxe-ajax.js v1.3.2
  * (c) 2017-2018 Xu Liangzhan
  * ISC License.
  */
