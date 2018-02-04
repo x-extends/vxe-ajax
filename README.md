@@ -12,7 +12,7 @@ Vue.use(VXEAjax, XEAjax)
 
 // ./app.js 通过vue实例的调用方式
 // ...vue代码省略
-this.$ajax.doGet('services/user/list', {id: 1})
+this.$ajax.doGet('/api/user/list', {id: 1})
 ```
 
 ### AMD 安装， 以 require.js 为例
@@ -35,7 +35,7 @@ define(['vue', 'xe-ajax', 'vxe-ajax'], function (Vue, XEAjax, VXEAjax) {
 define([], function () {
   // 通过vue实例的调用方式
   // ...vue代码省略
-  this.$ajax.doGet('services/user/list', {id: 1})
+  this.$ajax.doGet('/api/user/list', {id: 1})
 })
 ```
 
@@ -53,10 +53,10 @@ import VXEAjax from 'vxe-ajax'
 Vue.use(VXEAjax, XEAjax)
 
 // 通过vue实例的调用方式
-this.$ajax.doGet('services/user/list', {id: 1})
-this.$ajax.getJSON ('services/user/list', {id: 1})
-this.$ajax.doPost ('services/user/save', {id: 1})
-this.$ajax.postJSON ('services/user/save', {id: 1})
+this.$ajax.doGet('/api/user/list', {id: 1})
+this.$ajax.getJSON ('/api/user/list', {id: 1})
+this.$ajax.doPost ('/api/user/save', {id: 1})
+this.$ajax.postJSON ('/api/user/save', {id: 1})
 ```
 
 ### 混合函数
@@ -101,7 +101,7 @@ export default {
   },
   methods: {
     init () {
-      this.$ajax.getJSON('services/user/list', {id: 123})
+      this.$ajax.getJSON('/api/user/list', {id: 123})
       .then(data => {
         this.list = data
       }).catch(data => {
