@@ -31,7 +31,7 @@ require.config({
 
 // ./main.js 安装
 define(['vue', 'xe-ajax', 'vxe-ajax'], function (Vue, XEAjax, VXEAjax) {
-  // 如果第三个参数设置为true，则启动模拟 Promise 模式(默认是false)
+  // (v1.3.4+)如果第三个参数设置为true，则启动模拟 Promise 模式(默认是false)
   // 通过 this.$ajax 发起的请求 this 默认指向当前vue实例。
   Vue.use(VXEAjax, XEAjax, true)
 })
@@ -41,7 +41,7 @@ define([], function () {
   // 通过vue实例的调用方式
   // ...vue代码省略
   this.$ajax.getJSON('/api/user/list', {id: 1}).then(data => {
-    this.list = [] // 需要启动模拟 Promise 模式才支持 this 默认指向 vue 实例
+    this.list = [] // (v1.3.4+)需要启动模拟 Promise 模式才支持 this 默认指向 vue 实例
   })
 })
 ```
