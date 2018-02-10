@@ -5,17 +5,16 @@
 
 安装完成后自动挂载在vue实例 this.$ajax
 
-### 直接引用 script 全局安装，VXEAjax 会定义为全局变量
+### CDN 安装
+使用 script 方式安装，VXEAjax 会定义为全局变量<br/>
+生产环境请使用 vxe-ajax.min.js，更小的压缩版本，可以带来更快的速度体验。
+#### cdnjs 获取最新版本, [点击浏览](https://cdn.jsdelivr.net/npm/vxe-ajax/)已发布的所有 npm 包的源代码。
 ``` shell
-<script src="./dist/xe-ajax.min.js" type="text/javascript"></script>
-<script src="./dist/vxe-ajax.min.js" type="text/javascript"></script>
-
-// ./main.js 安装
-Vue.use(VXEAjax, XEAjax)
-
-// ./app.js 通过vue实例的调用方式
-// ...vue代码省略
-this.$ajax.getJSON('/api/user/list', {id: 1})
+<script src="https://cdn.jsdelivr.net/npm/vxe-ajax@1.3.4/dist/vxe-ajax.js" type="text/javascript"></script>
+```
+#### unpkg 获取最新版本, [点击浏览](https://unpkg.com/vxe-ajax@1.3.4/)已发布的所有 npm 包的源代码
+``` shell
+<script src="https://unpkg.com/vxe-ajax@1.3.4/dist/vxe-ajax.js" type="text/javascript"></script>
 ```
 
 ### AMD 安装， 以 require.js 为例
