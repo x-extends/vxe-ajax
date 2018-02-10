@@ -31,7 +31,9 @@ require.config({
 
 // ./main.js 安装
 define(['vue', 'xe-ajax', 'vxe-ajax'], function (Vue, XEAjax, VXEAjax) {
-  Vue.use(VXEAjax, XEAjax, true) // 如果第三个参数设置为true，则启动模拟 Promise 模式(默认是false)，通过 this.$ajax 发起的请求 this 默认指向当前vue实例。
+  // 如果第三个参数设置为true，则启动模拟 Promise 模式(默认是false)
+  // 通过 this.$ajax 发起的请求 this 默认指向当前vue实例。
+  Vue.use(VXEAjax, XEAjax, true)
 })
 
 // ./app.js 调用
