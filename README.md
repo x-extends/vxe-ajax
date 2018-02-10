@@ -1,5 +1,8 @@
 # VXEAjax 用于Vue全局安装 xe-ajax
 
+[![npm version](https://img.shields.io/npm/v/vxe-ajax.svg?style=flat-square)](https://www.npmjs.org/package/vxe-ajax)
+[![npm downloads](https://img.shields.io/npm/dm/vxe-ajax.svg?style=flat-square)](http://npm-stat.com/charts.html?package=vxe-ajax)
+
 安装完成后自动挂载在vue实例 this.$ajax
 
 ### 直接引用 script 全局安装，VXEAjax 会定义为全局变量
