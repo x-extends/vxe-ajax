@@ -48,7 +48,7 @@ define([], function () {
 
 ### ES6 Module 安装方式
 ``` shell
-npm install vxe-ajax --save
+npm install xe-ajax vxe-ajax --save
 ```
 
 ### 通过 Vue.use() 来全局安装
