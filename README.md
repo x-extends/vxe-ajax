@@ -5,6 +5,10 @@
 
 安装完成后自动挂载在vue实例 this.$ajax
 
+### 兼容性
+任何支持 Promise 的环境都能运行，低版本浏览器使用 polyfill<br/>
+支持 IE8+、Edge、Chrome、Firefox、Opera、Safari等...
+
 ### CDN 安装
 使用 script 方式安装，VXEAjax 会定义为全局变量<br/>
 生产环境请使用 vxe-ajax.min.js，更小的压缩版本，可以带来更快的速度体验。
