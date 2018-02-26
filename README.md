@@ -14,11 +14,11 @@
 生产环境请使用 vxe-ajax.min.js，更小的压缩版本，可以带来更快的速度体验。
 #### cdnjs 获取最新版本, [点击浏览](https://cdn.jsdelivr.net/npm/vxe-ajax/)已发布的所有 npm 包的源代码。
 ``` shell
-<script src="https://cdn.jsdelivr.net/npm/vxe-ajax@1.3.4/dist/vxe-ajax.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vxe-ajax@1.3.5/dist/vxe-ajax.js"></script>
 ```
-#### unpkg 获取最新版本, [点击浏览](https://unpkg.com/vxe-ajax@1.3.4/)已发布的所有 npm 包的源代码
+#### unpkg 获取最新版本, [点击浏览](https://unpkg.com/vxe-ajax@1.3.5/)已发布的所有 npm 包的源代码
 ``` shell
-<script src="https://unpkg.com/vxe-ajax@1.3.4/dist/vxe-ajax.js"></script>
+<script src="https://unpkg.com/vxe-ajax@1.3.5/dist/vxe-ajax.js"></script>
 ```
 
 ### AMD 安装， 以 require.js 为例
@@ -34,7 +34,7 @@ require.config({
 
 // ./main.js 安装
 define(['vue', 'xe-ajax', 'vxe-ajax'], function (Vue, XEAjax, VXEAjax) {
-  // (v1.3.4+)如果第三个参数设置为true，则启动模拟 Promise 模式(默认是false)
+  // (v1.3.5+)如果第三个参数设置为true，则启动模拟 Promise 模式(默认是false)
   // 通过 this.$ajax 发起的请求 this 默认指向当前vue实例。
   Vue.use(VXEAjax, XEAjax, true)
 })
@@ -44,7 +44,7 @@ define([], function () {
   // 通过vue实例的调用方式
   // ...vue代码省略
   this.$ajax.getJSON('/api/user/list', {id: 1}).then(data => {
-    this.list = [] // (v1.3.4+)需要启动模拟 Promise 模式才支持 this 默认指向 vue 实例
+    this.list = [] // (v1.3.5+)需要启动模拟 Promise 模式才支持 this 默认指向 vue 实例
   })
 })
 ```
