@@ -5,23 +5,26 @@
 
 安装完成后自动挂载在vue实例 this.$ajax
 
-### 兼容性
-任何支持 Promise 的环境都能运行，低版本浏览器使用 polyfill<br/>
+## 兼容性
+基于 Promise 实现，低版本浏览器使用 promise.js 或 polyfill  
 支持 IE8+、Edge、Chrome、Firefox、Opera、Safari等...
 
-### CDN 安装
-使用 script 方式安装，VXEAjax 会定义为全局变量<br/>
+## CDN 安装
+使用 script 方式安装，VXEAjax 会定义为全局变量  
 生产环境请使用 vxe-ajax.min.js，更小的压缩版本，可以带来更快的速度体验。
-#### cdnjs 获取最新版本, [点击浏览](https://cdn.jsdelivr.net/npm/vxe-ajax/)已发布的所有 npm 包的源代码。
+### cdnjs 获取最新版本
+[点击浏览](https://cdn.jsdelivr.net/npm/vxe-ajax/)已发布的所有 npm 包源码
 ``` shell
 <script src="https://cdn.jsdelivr.net/npm/vxe-ajax@1.3.5/dist/vxe-ajax.js"></script>
 ```
-#### unpkg 获取最新版本, [点击浏览](https://unpkg.com/vxe-ajax@1.3.5/)已发布的所有 npm 包的源代码
+### unpkg 获取最新版本
+[点击浏览](https://unpkg.com/vxe-ajax@1.3.5/)已发布的所有 npm 包源码
 ``` shell
 <script src="https://unpkg.com/vxe-ajax@1.3.5/dist/vxe-ajax.js"></script>
 ```
 
-### AMD 安装， 以 require.js 为例
+## AMD 安装
+### require.js 安装示例
 ``` shell
 // require 配置
 require.config({
@@ -34,22 +37,11 @@ require.config({
 
 // ./main.js 安装
 define(['vue', 'xe-ajax', 'vxe-ajax'], function (Vue, XEAjax, VXEAjax) {
-  // (v1.3.5+)如果第三个参数设置为true，则启动模拟 Promise 模式(默认是false)
-  // 通过 this.$ajax 发起的请求 this 默认指向当前vue实例。
   Vue.use(VXEAjax, XEAjax, true)
-})
-
-// ./app.js 调用
-define([], function () {
-  // 通过vue实例的调用方式
-  // ...vue代码省略
-  this.$ajax.getJSON('/api/user/list', {id: 1}).then(data => {
-    this.list = [] // (v1.3.5+)需要启动模拟 Promise 模式才支持 this 默认指向 vue 实例
-  })
 })
 ```
 
-### ES6 Module 安装方式
+## ES6 Module 安装
 ``` shell
 npm install xe-ajax vxe-ajax --save
 ```
@@ -67,14 +59,14 @@ this.$ajax.getJSON ('/api/user/list', {id: 1})
 this.$ajax.postJSON ('/api/user/save', {id: 1})
 ```
 
-### 混合函数
-#### 文件 ./customs.js
+## 混合函数
+### 文件 ./customs.js
 ``` shell
 export function get1 () {
   console.log('自定义的函数')
 } 
 ```
-#### 示例
+### 示例 ./main.js
 ``` shell
 import Vue from 'vue'
 import XEAjax from 'xe-ajax'
@@ -88,7 +80,7 @@ Vue.use(VXEAjax, XEAjax)
 this.$ajax.get1()
 ```
 
-#### 案例
+## 示例
 ./Home.vue
 ``` shell
 <template>
