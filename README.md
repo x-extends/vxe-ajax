@@ -6,7 +6,7 @@
 安装完成后自动挂载在vue实例 this.$ajax
 
 ## 兼容性
-基于 Promise 实现，低版本浏览器使用 promise.js 或 polyfill  
+基于 Promise 实现，低版本浏览器使用 polyfill es6-promise.js  
 支持 IE8+、Edge、Chrome、Firefox、Opera、Safari等...
 
 ## CDN 安装
