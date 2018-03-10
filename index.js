@@ -31,7 +31,7 @@ XEPromise.reject = function (reason, context) {
   return new XEPromise(Promise.reject(reason), context)
 }
 
-function plugin (Vue, XEAjax, isContext) {
+function VXEAjax (Vue, XEAjax, isContext) {
   Object.defineProperty(Vue.prototype, '$ajax', {
     get: function () {
       if (isContext) {
@@ -43,4 +43,4 @@ function plugin (Vue, XEAjax, isContext) {
   })
 }
 
-export default plugin
+export default VXEAjax

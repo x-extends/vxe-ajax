@@ -1,10 +1,13 @@
-/*!
- * vxe-ajax.js v1.3.5
+/**
+ * vxe-ajax.js v1.3.6
  * (c) 2017-2018 Xu Liangzhan
  * ISC License.
+ * @preserve
  */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() : typeof define === 'function' && define.amd ? define(factory) : (global.VXEAjax = factory())
+  typeof s === 'object' && typeof module !== 'undefined' ? module.s = factory()
+    : typeof define === 'function' && define.amd ? define(factory)
+      : (global.VXEAjax = factory())
 }(this, function () {
   'use strict'
 
@@ -41,7 +44,7 @@
     return new XEPromise(Promise.reject(reason), context)
   }
 
-  function plugin (Vue, XEAjax, isContext) {
+  function VXEAjax (Vue, XEAjax, isContext) {
     Object.defineProperty(Vue.prototype, '$ajax', {
       get: function () {
         if (isContext) {
@@ -53,5 +56,5 @@
     })
   }
 
-  return plugin
+  return VXEAjax
 }))
