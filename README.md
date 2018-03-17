@@ -3,11 +3,14 @@
 [![npm version](https://img.shields.io/npm/v/vxe-ajax.svg?style=flat-square)](https://www.npmjs.org/package/vxe-ajax)
 [![npm downloads](https://img.shields.io/npm/dm/vxe-ajax.svg?style=flat-square)](http://npm-stat.com/charts.html?package=vxe-ajax)
 
-安装完成后自动挂载在vue实例 this.$ajax
+安装完成后自动挂载在 vue 实例 this.$ajax
 
 ## 兼容性
 基于 Promise 实现，低版本浏览器使用 polyfill es6-promise.js  
-支持 IE8+、Edge、Chrome、Firefox、Opera、Safari等...
+
+![IE](https://raw.github.com/alrra/browser-logos/master/src/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png) | ![Chrome](https://raw.github.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/src/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/src/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+9+ ✔ | ✔ | ✔ | ✔ | 6.1+ ✔ |
 
 ## CDN 安装
 使用 script 方式安装，VXEAjax 会定义为全局变量  
@@ -55,29 +58,8 @@ import VXEAjax from 'vxe-ajax'
 Vue.use(VXEAjax, XEAjax)
 
 // 通过vue实例的调用方式
-this.$ajax.getJSON ('/api/user/list', {id: 1})
-this.$ajax.postJSON ('/api/user/save', {id: 1})
-```
-
-## 混合函数
-### 文件 ./customs.js
-``` shell
-export function get1 () {
-  console.log('自定义的函数')
-} 
-```
-### 示例 ./main.js
-``` shell
-import Vue from 'vue'
-import XEAjax from 'xe-ajax'
-import VXEAjax from 'vxe-ajax'
-import customs from './customs'
-
-XEAjax.mixin(customs)
-Vue.use(VXEAjax, XEAjax)
-
-// 调用自定义扩展函数
-this.$ajax.get1()
+this.$ajax.fetchGet ('/api/user/list', {id: 1})
+this.$ajax.fetchPost ('/api/user/save', {id: 1})
 ```
 
 ## 示例
@@ -100,7 +82,7 @@ export default {
   },
   methods: {
     init () {
-      this.$ajax.getJSON('/api/user/list', {id: 123}).then(data => {
+      this.$ajax.fetchGet('/api/user/list', {id: 123}).then(response => response.json()).then(data => {
         this.list = data
       }).catch(data => {
         this.list = []
