@@ -43,4 +43,4 @@ function VXEAjax (Vue, XEAjax, isContext) {
   })
 }
 
-export default VXEAjax
+module.exports = VXEAjax
