@@ -5,17 +5,17 @@
  * @preserve
  */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-    typeof define === 'function' && define.amd ? define(factory) :
-      (global.VXEAjax = factory());
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory()
+    : typeof define === 'function' && define.amd ? define(factory)
+      : (global.VXEAjax = factory())
 }(this, function () {
   'use strict'
 
-  function bindPromiseContext(callback, context) {
+  function bindPromiseContext (callback, context) {
     return typeof callback === 'function' ? callback.bind(context) : callback
   }
 
-  function XEPromise(executor, context) {
+  function XEPromise (executor, context) {
     this.promise = executor instanceof Promise ? executor : new Promise(executor.bind(context))
     this.context = context
   }
@@ -44,7 +44,7 @@
     return new XEPromise(Promise.reject(reason), context)
   }
 
-  function VXEAjax(Vue, XEAjax, isContext) {
+  function VXEAjax (Vue, XEAjax, isContext) {
     Object.defineProperty(Vue.prototype, '$ajax', {
       get: function () {
         if (isContext) {
@@ -55,7 +55,6 @@
       }
     })
   }
-
 
   return VXEAjax
 }))
