@@ -17,18 +17,18 @@
 生产环境请使用 vxe-ajax.min.js，更小的压缩版本，可以带来更快的速度体验。
 ### cdnjs 获取最新版本
 [点击浏览](https://cdn.jsdelivr.net/npm/vxe-ajax/)已发布的所有 npm 包源码
-``` shell
+```HTML
 <script src="https://cdn.jsdelivr.net/npm/vxe-ajax/dist/vxe-ajax.js"></script>
 ```
 ### unpkg 获取最新版本
 [点击浏览](https://unpkg.com/vxe-ajax/)已发布的所有 npm 包源码
-``` shell
+```HTML
 <script src="https://unpkg.com/vxe-ajax/dist/vxe-ajax.js"></script>
 ```
 
 ## AMD 安装
 ### require.js 安装示例
-``` shell
+```JavaScript
 // require 配置
 require.config({
   paths: {
@@ -47,12 +47,12 @@ define(['vue', 'xe-ajax', 'vxe-ajax'], function (Vue, XEAjax, VXEAjax) {
 ```
 
 ## ES6 Module 安装
-``` shell
+```JavaScript
 npm install xe-ajax vxe-ajax --save
 ```
 
 ### 通过 Vue.use() 来全局安装
-``` shell
+```JavaScript
 import Vue from 'vue'
 import XEAjax from 'xe-ajax'
 import VXEAjax from 'vxe-ajax'
@@ -66,7 +66,7 @@ this.$ajax.fetchPost ('/api/user/save', {id: 1})
 
 ## 示例
 ./Home.vue
-``` shell
+```HTML
 <template>
   <div>
     <ul>

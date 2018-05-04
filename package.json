@@ -1,6 +1,6 @@
 {
   "name": "vxe-ajax",
-  "version": "1.3.9",
+  "version": "1.4.0",
   "description": "VXEAjax 用于Vue全局安装 xe-ajax",
   "main": "index.js",
   "scripts": {
