@@ -44,16 +44,18 @@
     return new XEPromise(Promise.reject(reason), context)
   }
 
-  function VXEAjax (Vue, XEAjax, isContext) {
-    Object.defineProperty(Vue.prototype, '$ajax', {
-      get: function () {
-        if (isContext) {
-          XEAjax.$context = this
+  function VXEAjax (Vue, XEAjax, options) {
+    if (options && (options === true || options.context === true)) {
+      Object.defineProperty(Vue.prototype, '$ajax', {
+        get: function () {
           XEAjax.$Promise = XEPromise
+          XEAjax.$context = this
+          return XEAjax
         }
-        return XEAjax
-      }
-    })
+      })
+    } else {
+      Vue.prototype.$ajax = XEAjax
+    }
   }
 
   return VXEAjax

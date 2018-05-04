@@ -3,8 +3,6 @@
 [![npm version](https://img.shields.io/npm/v/vxe-ajax.svg?style=flat-square)](https://www.npmjs.org/package/vxe-ajax)
 [![npm downloads](https://img.shields.io/npm/dm/vxe-ajax.svg?style=flat-square)](http://npm-stat.com/charts.html?package=vxe-ajax)
 
-安装完成后自动挂载在 vue 实例 this.$ajax
-
 ## 兼容性
 依赖原生 Promise，低版本浏览器使用 polyfill es6-promise.js  
 
@@ -40,9 +38,8 @@ require.config({
 
 // ./main.js 安装
 define(['vue', 'xe-ajax', 'vxe-ajax'], function (Vue, XEAjax, VXEAjax) {
-  // ES6 环境中不需要启用，使用箭头函数即可
-  // 第三个参数如果为true，则启用模拟 Promise 模式，函数内部上下文 this 默认指向当前 vue 实例（和 ES6 箭头函数类似）
-  Vue.use(VXEAjax, XEAjax, true)
+  // 非 ES6 环境中如果需要启用模拟 Promise 模式对vue 实例上下文的支持（和 ES6 箭头函数效果一样），设置 {context: true}
+  Vue.use(VXEAjax, XEAjax, {context: true}) // 不建议启用模拟Promise,请使用箭头函数
 })
 ```
 
@@ -79,12 +76,15 @@ this.$ajax.fetchPost ('/api/user/save', {id: 1})
 export default {
   data () {
     return {
+      loading: false,
       list: []
     }
   },
   methods: {
     init () {
+      this.loading = true
       this.$ajax.fetchGet('/api/user/list').then(response => {
+        this.loading = false
         if (response.ok) {
           response.json().then(data => {
             this.list = data
