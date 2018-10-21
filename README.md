@@ -18,7 +18,7 @@ require.config({
 // ./main.js 安装
 define(['vue', 'xe-ajax', 'vxe-ajax'], function (Vue, XEAjax, VXEAjax) {
   // 非 ES6 环境中如果需要启用模拟 Promise 模式对vue 实例上下文的支持（和 ES6 箭头函数效果一样），设置 {context: true}
-  Vue.use(VXEAjax, XEAjax)
+  Vue.use(VXEAjax, XEAjax, {context: true})
 })
 ```
 
