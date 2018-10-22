@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import XEAjax from 'xe-ajax'
+import { XEAjaxMethods } from 'xe-ajax'
 
 /**
  * 用于 Vue 全局安装 xe-ajax
@@ -12,7 +12,7 @@ declare var VXEAjax;
 
 declare module 'vue/types/vue' {
   interface Vue {
-    $ajax: XEAjax
+    $ajax: XEAjaxMethods
   }
 }
 
