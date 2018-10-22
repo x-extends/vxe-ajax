@@ -3,6 +3,7 @@
   "version": "1.4.1",
   "description": "用于 Vue 全局安装 xe-ajax",
   "main": "index.js",
+  "typing": "index.d.ts",
   "scripts": {
     "test": "make test"
   },
