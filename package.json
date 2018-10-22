@@ -1,7 +1,7 @@
 {
   "name": "vxe-ajax",
   "version": "1.4.1",
-  "description": "A small wrapper for integrating xe-ajax to Vuejs",
+  "description": "A small wrapper for integrating xe-ajax to Vuejs.",
   "main": "index.js",
   "typing": "index.d.ts",
   "scripts": {
