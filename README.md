@@ -38,43 +38,14 @@ import VXEAjax from 'vxe-ajax'
 Vue.use(VXEAjax, XEAjax)
 ```
 
-## 示例
+## 使用
 
-./Home.vue
-
-```HTML
-<template>
-  <div>
-    <ul>
-      <li v-for="(item, index) in list" :key="index">{{ item.name }}</li>
-    </ul>
-  </div>
-</template>
-
-<script>
-export default {
-  data () {
-    return {
-      loading: false,
-      list: []
-    }
-  },
-  created () {
-    this.init()
-  },
-  methods: {
-    init () {
-      this.loading = true
-      this.$ajax.getJSON('/api/user/list').then(data => {
-        this.loading = false
-        this.list = data
-      }).catch(e => {
-        this.loading = false
-      })
-    }
-  }
-}
-</script>
+```JavaScript
+this.$ajax.fetch('/api/user/list').then(response => {
+  response.json().then(data => {
+    console.log(data)
+  })
+})
 ```
 
 ## License
