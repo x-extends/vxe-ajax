@@ -1,6 +1,6 @@
 {
   "name": "vxe-ajax",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "A small wrapper for integrating xe-ajax to Vuejs.",
   "main": "index.js",
   "typing": "index.d.ts",
@@ -29,6 +29,6 @@
   "homepage": "https://github.com/xuliangzhan/vxe-ajax#readme",
   "devDependencies": {
     "vue": "^2.5.16",
-    "xe-ajax": "^3.4.11"
+    "xe-ajax": "^3.4.12"
   }
 }
