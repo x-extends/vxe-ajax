@@ -12,7 +12,7 @@ declare var VXEAjax;
 
 declare module 'vue/types/vue' {
   interface Vue {
-    $ajax: XEAjaxMethods
+    $ajax: XEAjaxMethods;
   }
 }
 
