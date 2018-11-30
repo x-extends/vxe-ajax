@@ -40,12 +40,32 @@ Vue.use(VXEAjax, XEAjax)
 
 ## 使用
 
-```JavaScript
-this.$ajax.fetch('/api/user/list').then(response => {
-  response.json().then(data => {
-    console.log(data)
-  })
-})
+```html
+<template>
+  <ul>
+    <li v-for="(item, index) in list" :key="index">{{ item.name }}</li>
+  </ul>
+</template>
+```
+
+```html
+<script>
+export default {
+  name: 'App',
+  data: {
+    return {
+      list: []
+    }
+  },
+  created () {
+    this.$ajax.fetch('/api/user/list').then(response => {
+      response.json().then(data => {
+        this.list = data
+      })
+    })
+  }
+}
+</script>
 ```
 
 ## License
