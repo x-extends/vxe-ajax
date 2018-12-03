@@ -5,7 +5,7 @@
 [![npm downloads](https://img.shields.io/npm/dm/vxe-ajax.svg?style=flat-square)](http://npm-stat.com/charts.html?package=vxe-ajax)
 [![npm license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/xuliangzhan/vxe-ajax/blob/master/LICENSE)
 
-## AMD 安装
+## AMD install
 
 ```JavaScript
 // require 配置
@@ -24,13 +24,13 @@ define(['vue', 'xe-ajax', 'vxe-ajax'], function (Vue, XEAjax, VXEAjax) {
 })
 ```
 
-## NPM 安装
+## NPM install
 
 ```JavaScript
 npm install xe-ajax vxe-ajax --save
 ```
 
-### 通过 Vue.use() 来全局安装
+## Demo
 
 ```JavaScript
 import Vue from 'vue'
@@ -39,8 +39,6 @@ import VXEAjax from 'vxe-ajax'
 
 Vue.use(VXEAjax, XEAjax)
 ```
-
-## 使用
 
 ```html
 <template>
