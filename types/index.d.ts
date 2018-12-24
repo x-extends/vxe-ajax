@@ -2,11 +2,7 @@ import Vue from 'vue'
 import { XEAjaxMethods } from 'xe-ajax'
 
 /**
- * 用于 Vue 全局安装 xe-ajax
- * @example 
- ```javascript
- Vue.use(VXEAjax, XEAjax)
- ```
+ * A small wrapper for integrating xe-ajax to Vuejs.
  */
 declare var VXEAjax;
 
