@@ -7,11 +7,11 @@
 
 ## Installing
 
-```JavaScript
+```javascript
 npm install xe-ajax vxe-ajax --save
 ```
 
-```JavaScript
+```javascript
 // require 配置
 require.config({
   paths: {
@@ -28,7 +28,7 @@ define(['vue', 'xe-ajax', 'vxe-ajax'], function (Vue, XEAjax, VXEAjax) {
 
 ## Example
 
-```JavaScript
+```javascript
 import Vue from 'vue'
 import XEAjax from 'xe-ajax'
 import VXEAjax from 'vxe-ajax'
