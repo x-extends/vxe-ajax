@@ -1,4 +1,6 @@
-# 用于 Vue 全局安装 xe-ajax
+# vxe-ajax
+
+用于 Vue 全局安装 xe-ajax
 
 [![npm version](https://img.shields.io/npm/v/vxe-ajax.svg?style=flat-square)](https://www.npmjs.org/package/vxe-ajax)
 [![npm build](https://travis-ci.org/xuliangzhan/vxe-ajax.svg?branch=master)](https://travis-ci.org/xuliangzhan/vxe-ajax)
