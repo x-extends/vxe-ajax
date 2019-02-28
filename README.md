@@ -12,7 +12,7 @@
 npm install xe-ajax vxe-ajax --save
 ```
 
-在 [unpkg](https://unpkg.com/vxe-ajax/) 和 [cdnjs](https://cdn.jsdelivr.net/npm/vxe-ajax/) 上获取
+Get on [unpkg](https://unpkg.com/vxe-ajax/) and [cdnjs](https://cdn.jsdelivr.net/npm/vxe-ajax/)
 
 ```javascript
 <script src="https://unpkg.com/xe-ajax/dist/xe-ajax.min.js"></script>
