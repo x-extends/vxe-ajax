@@ -40,17 +40,14 @@ Vue.use(VXEAjax, XEAjax)
 ```html
 <script>
 export default {
-  name: 'App',
-  data: {
+  data () {
     return {
       list: []
     }
   },
   created () {
-    this.$ajax.fetch('/api/user/list').then(response => {
-      response.json().then(data => {
-        this.list = data
-      })
+    this.$ajax.getJSON('/api/user/list').then(list => {
+       this.list = data
     })
   }
 }
