@@ -8,23 +8,15 @@
 
 ## Installing
 
-```javascript
+```shell
 npm install xe-ajax vxe-ajax --save
 ```
 
+在 [unpkg](https://unpkg.com/vxe-ajax/) 和 [cdnjs](https://cdn.jsdelivr.net/npm/vxe-ajax/) 上获取
+
 ```javascript
-// require 配置
-require.config({
-  paths: {
-    // ...,
-    'xe-ajax': './dist/xe-ajax.min',
-    'vxe-ajax': './dist/vxe-ajax.min'
-  }
-})
-define(['vue', 'xe-ajax', 'vxe-ajax'], function (Vue, XEAjax, VXEAjax) {
-  // ES5 环境中可以设置 {context: true} 模拟箭头函数
-  Vue.use(VXEAjax, XEAjax, {context: true})
-})
+<script src="https://unpkg.com/xe-ajax/dist/xe-ajax.min.js"></script>
+<script src="https://unpkg.com/vxe-ajax/dist/vxe-ajax.min.js"></script>
 ```
 
 ## Example
