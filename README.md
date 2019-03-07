@@ -15,6 +15,7 @@ npm install xe-ajax vxe-ajax --save
 Get on [unpkg](https://unpkg.com/vxe-ajax/) and [cdnjs](https://cdn.jsdelivr.net/npm/vxe-ajax/)
 
 ```javascript
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script src="https://unpkg.com/xe-ajax/dist/xe-ajax.min.js"></script>
 <script src="https://unpkg.com/vxe-ajax/dist/vxe-ajax.min.js"></script>
 ```
@@ -32,7 +33,7 @@ Vue.use(VXEAjax, XEAjax)
 ```html
 <template>
   <ul>
-    <li v-for="(item, index) in list" :key="index">{{ item.name }}</li>
+    <li v-for="item in list" :key="item.id">{{ item.name }}</li>
   </ul>
 </template>
 ```

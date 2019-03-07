@@ -1,8 +1,10 @@
 {
   "name": "vxe-ajax",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "description": "A small wrapper for integrating xe-ajax to Vuejs.",
   "main": "index.js",
+  "unpkg": "dist/vxe-ajax.js",
+  "jsdelivr": "dist/vxe-ajax.js",
   "typings": "types/index.d.ts",
   "scripts": {
     "lint": "eslint dist/vxe-ajax.js index.js",
