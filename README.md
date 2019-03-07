@@ -16,8 +16,8 @@ Get on [unpkg](https://unpkg.com/vxe-ajax/) and [cdnjs](https://cdn.jsdelivr.net
 
 ```javascript
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-<script src="https://unpkg.com/xe-ajax/dist/xe-ajax.min.js"></script>
-<script src="https://unpkg.com/vxe-ajax/dist/vxe-ajax.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xe-ajax"></script>
+<script src="https://cdn.jsdelivr.net/npm/vxe-ajax"></script>
 ```
 
 ## Example
