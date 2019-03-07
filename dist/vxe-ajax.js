@@ -1,21 +1,21 @@
 /**
- * vxe-ajax.js v1.4.6
+ * vxe-ajax.js v1.4.8
  * (c) 2017-2018 Xu Liangzhan
  * ISC License.
  * @preserve
  */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory()
-    : typeof define === 'function' && define.amd ? define(factory)
-      : (global.VXEAjax = factory())
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+    typeof define === 'function' && define.amd ? define(factory) :
+      (global.VXEAjax = factory());
 }(this, function () {
   'use strict'
 
-  function bindPromiseContext (callback, context) {
+  function bindPromiseContext(callback, context) {
     return typeof callback === 'function' ? callback.bind(context) : callback
   }
 
-  function XEPromise (executor, context) {
+  function XEPromise(executor, context) {
     this.promise = executor instanceof Promise ? executor : new Promise(executor.bind(context))
     this.context = context
   }
@@ -44,7 +44,7 @@
     return new XEPromise(Promise.reject(reason), context)
   }
 
-  function VXEAjax (Vue, XEAjax, options) {
+  function VXEAjax(Vue, XEAjax, options) {
     if (options && (options === true || options.context === true)) {
       Object.defineProperty(Vue.prototype, '$ajax', {
         get: function () {
@@ -57,6 +57,7 @@
       Vue.prototype.$ajax = XEAjax
     }
   }
+
 
   return VXEAjax
 }))
