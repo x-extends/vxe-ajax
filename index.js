@@ -45,4 +45,4 @@ function VXEAjax (Vue, XEAjax, options) {
   }
 }
 
-module.exports = VXEAjax
+export default VXEAjax
