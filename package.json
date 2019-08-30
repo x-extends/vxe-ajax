@@ -1,7 +1,7 @@
 {
   "name": "vxe-ajax",
-  "version": "1.7.1",
-  "description": "A small wrapper for integrating xe-ajax to Vuejs.",
+  "version": "1.7.2",
+  "description": "用于 Vue 全局安装 xe-ajax",
   "main": "dist/index.common.js",
   "unpkg": "dist/index.js",
   "jsdelivr": "dist/index.js",
