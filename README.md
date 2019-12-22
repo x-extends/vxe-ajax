@@ -50,7 +50,7 @@ export default {
     }
   },
   created () {
-    this.$ajax.getJSON('/api/user/list').then(list => {
+    this.$ajax.get('/api/user/list').then(list => {
        this.list = data
     })
   }
