@@ -19,7 +19,12 @@
   _exports["default"] = void 0;
 
   function VXEAjax(Vue, XEAjax) {
-    Vue.prototype.$ajax = XEAjax;
+    Object.defineProperty(Vue.prototype, '$ajax', {
+      get: function get() {
+        XEAjax.$context = this;
+        return XEAjax;
+      }
+    });
   }
 
   var _default = VXEAjax;
