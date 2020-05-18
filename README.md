@@ -30,7 +30,10 @@ import Vue from 'vue'
 import XEAjax from 'xe-ajax'
 import VXEAjax from 'vxe-ajax'
 
+// Case1:
 Vue.use(VXEAjax, XEAjax)
+// Case2:
+// // Vue.prototype.$ajax = XEAjax
 ```
 
 ```html
@@ -50,8 +53,8 @@ export default {
     }
   },
   created () {
-    this.$ajax.get('/api/user/list').then(list => {
-       this.list = data
+    this.$ajax.get('/api/user/list').then(data => {
+      this.list = data
     })
   }
 }
