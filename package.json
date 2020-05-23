@@ -1,6 +1,6 @@
 {
   "name": "vxe-ajax",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "用于 Vue 全局安装 xe-ajax",
   "main": "dist/vxe-ajax.common.js",
   "unpkg": "dist/vxe-ajax.js",
