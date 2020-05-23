@@ -30,10 +30,14 @@ import Vue from 'vue'
 import XEAjax from 'xe-ajax'
 import VXEAjax from 'vxe-ajax'
 
-// Case1:
+// use:
 Vue.use(VXEAjax, XEAjax)
-// Case2:
-// // Vue.prototype.$ajax = XEAjax
+
+// vue2.x:
+// Vue.prototype.$ajax = XEAjax
+
+// vue3.x:
+// app.config.globalProperties.$ajax = XEAjax
 ```
 
 ```html
