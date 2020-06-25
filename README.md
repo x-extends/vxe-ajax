@@ -5,7 +5,7 @@
 [![npm build](https://travis-ci.org/xuliangzhan/vxe-ajax.svg?branch=master)](https://travis-ci.org/xuliangzhan/vxe-ajax)
 [![npm downloads](https://img.shields.io/npm/dm/vxe-ajax.svg?style=flat-square)](http://npm-stat.com/charts.html?package=vxe-ajax)
 [![gzip size: JS](http://img.badgesize.io/https://unpkg.com/vxe-ajax/dist/vxe-ajax.min.js?compression=gzip&label=gzip%20size:%20JS)](https://unpkg.com/vxe-ajax/dist/vxe-ajax.min.js)
-[![npm license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/xuliangzhan/vxe-ajax/blob/master/LICENSE)
+[![npm license](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE)
 
 用于 Vue 全局安装 xe-ajax
 
@@ -67,4 +67,4 @@ export default {
 
 ## License
 
-MIT License, 2017-present, Xu Liangzhan
+[MIT](LICENSE) © 2017-present, Xu Liangzhan

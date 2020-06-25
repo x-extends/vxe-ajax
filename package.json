@@ -44,7 +44,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xuliangzhan/vxe-ajax.git"
+    "url": "git+https://github.com/x-extends/vxe-ajax.git"
   },
   "keywords": [
     "vue-ajax",
@@ -56,7 +56,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/xuliangzhan/vxe-ajax/issues"
+    "url": "https://github.com/x-extends/vxe-ajax/issues"
   },
-  "homepage": "https://github.com/xuliangzhan/vxe-ajax#readme"
+  "homepage": "https://github.com/x-extends/vxe-ajax#readme"
 }
