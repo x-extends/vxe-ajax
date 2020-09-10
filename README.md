@@ -28,14 +28,7 @@ import Vue from 'vue'
 import XEAjax from 'xe-ajax'
 import VXEAjax from 'vxe-ajax'
 
-// use:
 Vue.use(VXEAjax, XEAjax)
-
-// vue2.x:
-// Vue.prototype.$ajax = XEAjax
-
-// vue3.x:
-// app.config.globalProperties.$ajax = XEAjax
 ```
 
 ```html
