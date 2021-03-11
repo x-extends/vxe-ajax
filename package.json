@@ -16,9 +16,6 @@
     "index.js",
     "*.d.ts"
   ],
-  "peerDependencies": {
-    "xe-ajax": ">=4.0.0"
-  },
   "devDependencies": {
     "@babel/core": "^7.4.4",
     "@babel/plugin-transform-runtime": "^7.4.4",
